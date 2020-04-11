@@ -4,14 +4,14 @@ var myHeading = document.querySelector('h1');
 function setUserName() {
   var myName = prompt('Please enter your name.');
   localStorage.setItem('name', myName);
-  myHeading.textContent = 'Крутой суп от ' + myName;
+  myHeading.textContent = 'Best soup from ' + myName;
 }
 
 if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   var storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Крутой суп от ' + storedName;
+  myHeading.textContent = 'Best soup from ' + storedName;
 }
 
 myButton.onclick = function() {
